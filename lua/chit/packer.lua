@@ -2,29 +2,14 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
 	-- Packer can manage itself
-
-use {
-    'wthollingsworth/pomodoro.nvim',
-    requires = 'MunifTanjim/nui.nvim',
-    config = function()
-        require('pomodoro').setup({
-            time_work = 50,
-            time_break_short = 10,
-            time_break_long = 30,
-            timers_to_long_break = 3
-        })
-    end
-}
+    use 'nvim-tree/nvim-web-devicons'
+    use({
+        "stevearc/oil.nvim",
+   })
     use 'm4xshen/autoclose.nvim'
 	use 'wbthomason/packer.nvim'
 	use { "catppuccin/nvim", as = "catppuccin" }
-    use {
-        "folke/tokyonight.nvim",
-        lazy = false,
-        priority = 1000,
-        opts = {},
-    }
-	use ('theprimeagen/harpoon')
+    use ('theprimeagen/harpoon')
 	use ('tpope/vim-fugitive')
     use 'mbbill/undotree'
 	use {
