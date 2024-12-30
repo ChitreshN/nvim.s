@@ -32,3 +32,5 @@ function Colorr()
 end
 
 --Colorr()
+
+-- Function to set conceal rules for Haskell files

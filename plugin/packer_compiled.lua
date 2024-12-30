@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/chitreshnarra/.cache/nvim/packer_hererocks/2.1.1716656478/share/lua/5.1/?.lua;/home/chitreshnarra/.cache/nvim/packer_hererocks/2.1.1716656478/share/lua/5.1/?/init.lua;/home/chitreshnarra/.cache/nvim/packer_hererocks/2.1.1716656478/lib/luarocks/rocks-5.1/?.lua;/home/chitreshnarra/.cache/nvim/packer_hererocks/2.1.1716656478/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/chitreshnarra/.cache/nvim/packer_hererocks/2.1.1716656478/lib/lua/5.1/?.so"
+local package_path_str = "/home/chitreshnarra/.cache/nvim/packer_hererocks/2.1.1720049189/share/lua/5.1/?.lua;/home/chitreshnarra/.cache/nvim/packer_hererocks/2.1.1720049189/share/lua/5.1/?/init.lua;/home/chitreshnarra/.cache/nvim/packer_hererocks/2.1.1720049189/lib/luarocks/rocks-5.1/?.lua;/home/chitreshnarra/.cache/nvim/packer_hererocks/2.1.1720049189/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/chitreshnarra/.cache/nvim/packer_hererocks/2.1.1720049189/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -140,6 +140,11 @@ _G.packer_plugins = {
     path = "/home/chitreshnarra/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-jdtls"] = {
+    loaded = true,
+    path = "/home/chitreshnarra/.local/share/nvim/site/pack/packer/start/nvim-jdtls",
+    url = "https://github.com/mfussenegger/nvim-jdtls"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/chitreshnarra/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
@@ -156,7 +161,6 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   ["oil.nvim"] = {
-    config = { "\27LJ\2\n1\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\boil\frequire\0" },
     loaded = true,
     path = "/home/chitreshnarra/.local/share/nvim/site/pack/packer/start/oil.nvim",
     url = "https://github.com/stevearc/oil.nvim"
@@ -170,6 +174,17 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/chitreshnarra/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["remote.nvim"] = {
+    loaded = true,
+    path = "/home/chitreshnarra/.local/share/nvim/site/pack/packer/start/remote.nvim",
+    url = "/home/chitreshnarra/nvim_plugins/remote.nvim"
+  },
+  ["supermaven-nvim"] = {
+    config = { "\27LJ\2\n\15\0\0\1\0\0\0\2+\0\1\0L\0\2\0Á\2\1\0\4\0\f\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\0025\3\b\0=\3\t\0023\3\n\0=\3\v\2B\0\2\1K\0\1\0\14condition\0\ncolor\1\0\2\21suggestion_color\f#ffffff\ncterm\3Ù\1\21ignore_filetypes\1\0\1\bcpp\2\fkeymaps\1\0\a\14condition\0\20disable_keymaps\1\14log_level\tinfo\30disable_inline_completion\1\fkeymaps\0\21ignore_filetypes\0\ncolor\0\1\0\3\21clear_suggestion\n<C-x>\22accept_suggestion\n<C-a>\16accept_word\n<C-s>\nsetup\20supermaven-nvim\frequire\0" },
+    loaded = true,
+    path = "/home/chitreshnarra/.local/share/nvim/site/pack/packer/start/supermaven-nvim",
+    url = "https://github.com/supermaven-inc/supermaven-nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
@@ -189,14 +204,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: oil.nvim
-time([[Config for oil.nvim]], true)
-try_loadstring("\27LJ\2\n1\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\boil\frequire\0", "config", "oil.nvim")
-time([[Config for oil.nvim]], false)
 -- Config for: arshamiser.nvim
 time([[Config for arshamiser.nvim]], true)
 try_loadstring("\27LJ\2\nè\2\0\0\4\0\r\0\0206\0\0\0'\2\1\0B\0\2\0016\0\2\0006\1\0\0'\3\4\0B\1\2\0029\1\5\1=\1\3\0006\0\6\0009\0\a\0'\1\b\0=\1\5\0006\0\6\0009\0\t\0009\0\n\0'\2\v\0'\3\f\0B\0\3\1K\0\1\0004%{%v:lua.require(\"arshamiser.tabline\").draw()%}\ftabline\20nvim_set_option\bapi\28v:lua.custom_foldtext()\bopt\bvim\rfoldtext\23arshamiser.folding\20custom_foldtext\a_G\25arshamiser.feliniser\frequire\0", "config", "arshamiser.nvim")
 time([[Config for arshamiser.nvim]], false)
+-- Config for: supermaven-nvim
+time([[Config for supermaven-nvim]], true)
+try_loadstring("\27LJ\2\n\15\0\0\1\0\0\0\2+\0\1\0L\0\2\0Á\2\1\0\4\0\f\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\0025\3\b\0=\3\t\0023\3\n\0=\3\v\2B\0\2\1K\0\1\0\14condition\0\ncolor\1\0\2\21suggestion_color\f#ffffff\ncterm\3Ù\1\21ignore_filetypes\1\0\1\bcpp\2\fkeymaps\1\0\a\14condition\0\20disable_keymaps\1\14log_level\tinfo\30disable_inline_completion\1\fkeymaps\0\21ignore_filetypes\0\ncolor\0\1\0\3\21clear_suggestion\n<C-x>\22accept_suggestion\n<C-a>\16accept_word\n<C-s>\nsetup\20supermaven-nvim\frequire\0", "config", "supermaven-nvim")
+time([[Config for supermaven-nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
