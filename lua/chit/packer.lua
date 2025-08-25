@@ -8,8 +8,8 @@ return require('packer').startup(function(use)
    })
     use 'm4xshen/autoclose.nvim'
 	use 'wbthomason/packer.nvim'
-	use { "catppuccin/nvim", as = "catppuccin" }
     use ('theprimeagen/harpoon')
+    use { "ellisonleao/gruvbox.nvim" }
 	use ('tpope/vim-fugitive')
     use 'mbbill/undotree'
 	use {
@@ -82,6 +82,4 @@ return require('packer').startup(function(use)
             })
         end,
     }
-    use '/home/chitreshnarra/nvim_plugins/remote.nvim'
 end)
-

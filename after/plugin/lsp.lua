@@ -33,6 +33,18 @@ require('mason-lspconfig').setup({
     },
 })
 
+require('lspconfig')['hls'].setup{
+    filetypes = { 'haskell', 'lhaskell', 'cabal' },
+    cmd = { "haskell-language-server-wrapper", "--lsp" },
+    on_attach = lsp_zero.on_attach,
+    settings = {
+        haskell = {
+            formattingProvider = 'fourmolu',
+        }
+    },
+    root_dir = require('lspconfig').util.root_pattern('*.cabal', 'hie.yaml', 'stack.yaml', 'cabal.project', '.git'),
+}
+
 local cmp = require('cmp')
 
 cmp.setup({
