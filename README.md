@@ -76,8 +76,16 @@ To add a server, put it in `mason_servers` (mason installs it) or
    `stdpath("cache")/jdtls`, never inside the project.
 3. **Health check** — `:checkhealth` should come back clean.
 
+On the very first launch mason installs `lua_ls` and `ts_ls` in the background,
+which finishes after the first buffer is already open — so LSP will not be
+attached to it. Watch `:Mason` for the installs to finish, then reopen the file.
+Every later launch attaches immediately.
+
 Treesitter parsers install on demand the first time you open a file of a new
 filetype, so the first Python (or whatever) buffer takes a second to compile.
+
+Note that mason deliberately skips `ensure_installed` when Neovim runs headless,
+so `nvim --headless` will never install the servers for you.
 
 ## Layout
 
